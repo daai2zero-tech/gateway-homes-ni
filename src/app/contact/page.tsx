@@ -75,7 +75,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '56px 24px 80px', display: 'grid', gridTemplateColumns: '1fr 380px', gap: '64px', alignItems: 'start' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '56px 24px 80px', gap: '64px' }} className="contact-main-grid">
 
         {/* FORM */}
         <div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} noValidate>
               <h2 style={{ fontSize: '22px', fontWeight: 700, color: '#0f172a', marginBottom: '32px', letterSpacing: '-0.01em' }}>Send us a message</h2>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+              <div className="form-row-gh" style={{ gap: '20px', marginBottom: '20px' }}>
                 <div>
                   <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151', display: 'block', marginBottom: '6px' }}>Full Name <span style={{ color: '#ef4444' }}>*</span></label>
                   <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Jane Smith"
@@ -114,7 +114,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+              <div className="form-row-gh" style={{ gap: '20px', marginBottom: '20px' }}>
                 <div>
                   <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151', display: 'block', marginBottom: '6px' }}>Phone Number</label>
                   <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="07700 000000" style={inputStyle} />

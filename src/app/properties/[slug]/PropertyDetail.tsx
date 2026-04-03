@@ -74,7 +74,7 @@ export default function PropertyDetail({ property, allProperties }: { property: 
 
       {/* Thumbnails */}
       <div style={{ background: '#0f172a', padding: '10px 24px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', gap: '8px' }} className="thumbs-grid">
           {[0, 1, 2, 3].map((i) => (
             <div key={i} style={{ height: '70px', borderRadius: '6px', overflow: 'hidden', cursor: 'pointer', opacity: i === 0 ? 1 : 0.55 }}>
               <img src={property.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: `brightness(${0.75 + i * 0.08})` }} />
@@ -96,12 +96,12 @@ export default function PropertyDetail({ property, allProperties }: { property: 
 
       {/* Main content */}
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 24px 80px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '48px', alignItems: 'start' }}>
+        <div className="prop-detail-grid">
 
           {/* LEFT */}
           <div>
             {/* Stats row */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1px', background: '#e4e4e7', borderRadius: '12px', overflow: 'hidden', marginBottom: '36px' }}>
+            <div className="prop-stats-grid">
               {[
                 { val: property.beds, label: 'Bedrooms' },
                 { val: property.baths, label: 'Bathrooms' },
@@ -122,7 +122,7 @@ export default function PropertyDetail({ property, allProperties }: { property: 
 
             {/* Features */}
             <h2 style={{ fontSize: '19px', fontWeight: 700, color: '#0f172a', marginBottom: '16px', letterSpacing: '-0.01em' }}>Key Features</h2>
-            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 36px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 36px' }} className="features-grid-gh">
               {property.features.map((feature) => (
                 <li key={feature} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14px', color: '#374151' }}>
                   <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: P, flexShrink: 0 }} />
@@ -245,7 +245,7 @@ export default function PropertyDetail({ property, allProperties }: { property: 
         {/* Similar Properties */}
         <div style={{ marginTop: '72px', borderTop: '1px solid #e4e4e7', paddingTop: '56px' }}>
           <h2 style={{ fontSize: '26px', fontWeight: 800, color: '#0f172a', marginBottom: '28px', letterSpacing: '-0.01em' }}>Similar Properties</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <div className="similar-grid">
             {similar.map((p) => (
               <Link key={p.id} href={`/properties/${p.slug}`} style={{ textDecoration: 'none' }}>
                 <div style={{ border: '1.5px solid #e4e4e7', borderRadius: '14px', overflow: 'hidden', background: '#ffffff', transition: 'box-shadow 0.2s' }}>

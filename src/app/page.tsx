@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section style={{ background: '#ffffff', minHeight: '82vh', display: 'grid', gridTemplateColumns: '55% 45%', overflow: 'hidden' }}>
+      <section className="hero-grid" style={{ background: '#ffffff' }}>
         {/* Left: copy + search */}
         <div style={{ padding: '72px 48px 72px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'center', maxWidth: '680px', marginLeft: 'auto' }}>
           {/* Pill */}
@@ -96,7 +96,7 @@ export default function HomePage() {
         </div>
 
         {/* Right: property photo */}
-        <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="hero-right-col">
           <img
             src="https://images.unsplash.com/photo-1621983209348-7b5a63f23866?auto=format&fit=crop&w=900&q=85"
             alt="Executive home in Eglinton"
@@ -128,8 +128,8 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS BAR ── */}
-      <section style={{ background: '#0f172a', padding: '32px 24px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+      <section className="dark-stats-bar">
+        <div className="dark-stats-inner" style={{ gap: '24px' }}>
           {[
             { value: '320+', label: 'Properties Listed' },
             { value: '97%', label: 'Asking Price Achieved' },
@@ -155,7 +155,7 @@ export default function HomePage() {
             <Link href="/properties" style={{ color: P, fontWeight: 600, fontSize: '14px', textDecoration: 'none' }}>View all →</Link>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <div className="props-grid">
             {featured.map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}
@@ -178,7 +178,7 @@ export default function HomePage() {
             <p style={{ color: '#6b7280', fontSize: '15px', margin: 0 }}>Discover properties across the North West by region</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+          <div className="area-cards-grid">
             {[
               {
                 name: 'Derry City',
@@ -210,7 +210,7 @@ export default function HomePage() {
       {/* ── VALUATION CTA ── */}
       <section style={{ padding: '80px 24px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 8px 48px rgba(0,0,0,0.12)' }}>
+          <div className="valuation-grid" style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 8px 48px rgba(0,0,0,0.12)' }}>
             {/* Left */}
             <div style={{ background: '#0f172a', padding: '64px 56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', top: '-80px', right: '-80px', width: '300px', height: '300px', borderRadius: '50%', background: 'rgba(124,58,237,0.12)', pointerEvents: 'none' }} />
@@ -262,7 +262,7 @@ export default function HomePage() {
             <p style={{ fontSize: '12px', fontWeight: 700, color: P, textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 10px' }}>Why Choose Us</p>
             <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>Your home is in safe hands</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <div className="why-grid-gh">
             {[
               {
                 title: 'Local Knowledge',

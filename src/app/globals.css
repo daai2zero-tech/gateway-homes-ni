@@ -9,3 +9,84 @@
 }
 
 body { font-family: 'Plus Jakarta Sans', sans-serif; color: #0f172a; background: white; }
+
+/* ── Responsive utilities ── */
+.hero-grid { display: grid; grid-template-columns: 55% 45%; min-height: 82vh; overflow: hidden; }
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+}
+
+.nav-links-gh { display: flex; align-items: center; gap: 28px; }
+.nav-hamburger-gh { display: none; cursor: pointer; background: none; border: none; padding: 4px; }
+@media (max-width: 768px) {
+  .nav-links-gh { display: none; }
+  .nav-links-gh.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 200; border-top: 1px solid #e4e4e7; }
+  .nav-hamburger-gh { display: block; }
+}
+
+.stats-bar-grid { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+@media (max-width: 640px) { .stats-bar-grid { gap: 20px; } }
+
+.area-cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 900px) { .area-cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .area-cards-grid { grid-template-columns: 1fr; } }
+
+.props-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 900px) { .props-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .props-grid { grid-template-columns: 1fr; } }
+
+.why-grid-gh { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 768px) { .why-grid-gh { grid-template-columns: 1fr; } }
+
+.valuation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+@media (max-width: 768px) { .valuation-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.contact-main-grid { display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: start; }
+@media (max-width: 900px) { .contact-main-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.form-row-gh { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 640px) { .form-row-gh { grid-template-columns: 1fr; } }
+
+.prop-detail-grid { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: start; }
+@media (max-width: 900px) { .prop-detail-grid { grid-template-columns: 1fr; } }
+
+.prop-stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: #e4e4e7; border-radius: 12px; overflow: hidden; margin-bottom: 36px; }
+@media (max-width: 640px) { .prop-stats-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.thumbs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+@media (max-width: 480px) { .thumbs-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.similar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 768px) { .similar-grid { grid-template-columns: 1fr; } }
+
+.features-grid-gh { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 480px) { .features-grid-gh { grid-template-columns: 1fr; } }
+
+.rent-steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 64px; }
+@media (max-width: 768px) { .rent-steps-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .rent-steps-grid { grid-template-columns: 1fr; } }
+
+.rent-costs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+@media (max-width: 768px) { .rent-costs-grid { grid-template-columns: 1fr; } }
+
+.new-homes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 768px) { .new-homes-grid { grid-template-columns: 1fr; } }
+
+.dev-card-grid { display: grid; grid-template-columns: 380px 1fr; }
+@media (max-width: 900px) { .dev-card-grid { grid-template-columns: 1fr; } }
+
+.dev-features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+@media (max-width: 480px) { .dev-features-grid { grid-template-columns: 1fr; } }
+
+.why-buy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 768px) { .why-buy-grid { grid-template-columns: 1fr; } }
+
+.register-cta-grid { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+@media (max-width: 640px) { .register-cta-grid { grid-template-columns: 1fr; } }
+
+.hero-right-col { position: relative; overflow: hidden; }
+@media (max-width: 768px) { .hero-right-col { height: 280px; } }
+
+.dark-stats-bar { background: #0f172a; padding: 28px 24px; }
+.dark-stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.08); max-width: 1200px; margin: 0 auto; }
+@media (max-width: 640px) { .dark-stats-inner { grid-template-columns: repeat(2, 1fr); } }

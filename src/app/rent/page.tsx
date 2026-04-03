@@ -76,7 +76,7 @@ export default function RentPage() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', marginBottom: '64px' }}>
+          <div className="rent-steps-grid">
             {[
               { step: '01', title: 'Register', desc: 'Tell us what you\'re looking for — area, size, budget — and we\'ll match you with suitable properties.' },
               { step: '02', title: 'View', desc: 'We arrange viewings at times that suit you. Our team knows every property inside out.' },
@@ -94,7 +94,7 @@ export default function RentPage() {
           </div>
 
           {/* Costs breakdown */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', alignItems: 'start' }}>
+          <div className="rent-costs-grid">
             <div>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#0f172a', marginBottom: '20px', letterSpacing: '-0.01em' }}>Typical costs</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>

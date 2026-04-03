@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 10);
@@ -20,7 +21,7 @@ export default function Navigation() {
       boxShadow: scrolled ? '0 2px 16px rgba(0,0,0,0.07)' : 'none',
       transition: 'box-shadow 0.2s',
     }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px', position: 'relative' }}>
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline', gap: '2px' }}>
           <span style={{ fontSize: '20px', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em' }}>Gateway</span>
@@ -29,7 +30,7 @@ export default function Navigation() {
         </Link>
 
         {/* Nav Links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
+        <div className={`nav-links-gh${menuOpen ? ' open' : ''}`}>
           <Link href="/properties?status=sale" style={{ textDecoration: 'none', color: '#374151', fontSize: '14px', fontWeight: 500 }}>
             Buy
           </Link>
@@ -62,6 +63,28 @@ export default function Navigation() {
             Free Valuation
           </Link>
         </div>
+
+        {/* Hamburger */}
+        <button
+          className="nav-hamburger-gh"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {menuOpen ? (
+              <>
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </>
+            ) : (
+              <>
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </>
+            )}
+          </svg>
+        </button>
       </div>
     </nav>
   );

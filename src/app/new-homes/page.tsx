@@ -105,7 +105,7 @@ export default function NewHomesPage() {
         </div>
 
         {/* Register interest banner */}
-        <div style={{ marginTop: '72px', background: '#0f172a', borderRadius: '20px', padding: '56px 48px', display: 'grid', gridTemplateColumns: '1fr auto', gap: '32px', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div className="register-cta-grid" style={{ marginTop: '72px', background: '#0f172a', borderRadius: '20px', padding: '56px 48px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: '-60px', right: '120px', width: '260px', height: '260px', borderRadius: '50%', background: 'rgba(124,58,237,0.12)', pointerEvents: 'none' }} />
           <div style={{ position: 'relative' }}>
             <p style={{ color: '#a78bfa', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 10px' }}>Be first in line</p>
@@ -133,7 +133,7 @@ export default function NewHomesPage() {
               New builds come with benefits that older homes simply can&apos;t match.
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <div className="why-buy-grid">
             {[
               {
                 title: 'Energy Efficient',
@@ -193,9 +193,8 @@ function DevelopmentCard({ dev }: { dev: typeof developments[0] }) {
         background: '#ffffff',
         boxShadow: hovered ? '0 8px 28px rgba(124,58,237,0.08)' : '0 1px 4px rgba(0,0,0,0.05)',
         transition: 'box-shadow 0.2s, border-color 0.2s',
-        display: 'grid',
-        gridTemplateColumns: '380px 1fr',
       }}
+      className="dev-card-grid"
     >
       {/* Image */}
       <div style={{ position: 'relative', overflow: 'hidden' }}>
@@ -232,7 +231,7 @@ function DevelopmentCard({ dev }: { dev: typeof developments[0] }) {
 
           <p style={{ fontSize: '14px', color: '#374151', lineHeight: 1.65, margin: '0 0 20px' }}>{dev.desc}</p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px' }}>
+          <div className="dev-features-grid">
             {dev.features.map((f) => (
               <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
                 <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: P, flexShrink: 0 }} />
