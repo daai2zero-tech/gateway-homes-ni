@@ -33,13 +33,13 @@ export default function Navigation() {
           <Link href="/properties?status=sale" style={{ textDecoration: 'none', color: '#374151', fontSize: '14px', fontWeight: 500 }}>
             Buy
           </Link>
-          <Link href="/properties?status=let" style={{ textDecoration: 'none', color: '#374151', fontSize: '14px', fontWeight: 500 }}>
+          <Link href="/rent" style={{ textDecoration: 'none', color: '#374151', fontSize: '14px', fontWeight: 500 }}>
             Rent
           </Link>
           <Link href="/contact?enquiry=Selling" style={{ textDecoration: 'none', color: '#374151', fontSize: '14px', fontWeight: 500 }}>
             Sell
           </Link>
-          <Link href="/contact?enquiry=General" style={{ textDecoration: 'none', color: '#374151', fontSize: '14px', fontWeight: 500 }}>
+          <Link href="/new-homes" style={{ textDecoration: 'none', color: '#374151', fontSize: '14px', fontWeight: 500 }}>
             New Homes
           </Link>
           <Link href="/contact" style={{ textDecoration: 'none', color: '#374151', fontSize: '14px', fontWeight: 500 }}>

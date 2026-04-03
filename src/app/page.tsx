@@ -267,18 +267,40 @@ export default function HomePage() {
               {
                 title: 'Local Knowledge',
                 desc: 'Born and based in Derry, our team knows every street, every neighbourhood, and every price range across the North West.',
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                  </svg>
+                ),
               },
               {
                 title: 'No Hidden Fees',
                 desc: 'We believe in complete transparency. Our fees are straightforward, our advice is honest, and there are no nasty surprises.',
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <polyline points="9 12 11 14 15 10"/>
+                  </svg>
+                ),
               },
               {
                 title: 'Dedicated Support',
                 desc: 'From your first viewing to the day you get your keys, you\'ll have a named negotiator with you every step of the way.',
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                ),
               },
             ].map((item) => (
               <div key={item.title} style={{ background: '#ffffff', border: '1.5px solid #f0f0f2', borderRadius: '16px', padding: '36px 32px' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: PLight, marginBottom: '20px' }} />
+                <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: PLight, marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: P }}>
+                  {item.icon}
+                </div>
                 <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#0f172a', marginBottom: '10px', letterSpacing: '-0.01em' }}>{item.title}</h3>
                 <p style={{ fontSize: '14px', color: '#6b7280', lineHeight: 1.65, margin: 0 }}>{item.desc}</p>
               </div>
